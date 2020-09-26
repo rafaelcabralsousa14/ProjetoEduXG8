@@ -15,6 +15,7 @@ namespace ProjetoEduXG8.Domains
         [ForeignKey("IdUsuario")]
         public Guid IdDica { get; set; }
         [ForeignKey("IdDica")]
+        public Dica Dica { get; set; }
         
         public Guid IdCurtida { get; set; }
 
@@ -30,4 +31,4 @@ namespace ProjetoEduXG8.Domains
 
         
     }
-}
+} 

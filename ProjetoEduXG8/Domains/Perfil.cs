@@ -9,6 +9,7 @@ namespace ProjetoEduXG8.Domains
     {
         public Guid IdPerfil  { get; set; }
         public string Permissao { get; set; }
+        public string Nome { get; set; }
 
         public Perfil()
         {

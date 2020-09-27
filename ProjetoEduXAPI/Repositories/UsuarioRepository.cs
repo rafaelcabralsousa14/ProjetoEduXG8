@@ -8,29 +8,32 @@ using System.Threading.Tasks;
 
 namespace ProjetoEduXAPI.Repositories
 {
-    public class CategoriaRepository : iCategoria
+    public class UsuarioRepository : iUsuario
     {
         private readonly EduXContext _ctx;
-        public CategoriaRepository()
+        public UsuarioRepository()
         {
             _ctx = new EduXContext();
         }
-            
-        public void Alterar(Categoria a)
+
+        public void Alterar(Usuario a)
         {
             try
             {
-                Categoria categoriaTemp = BuscarPorID(a.IdCategoria);
+                Usuario usuarioTemp = BuscarPorID(a.IdUsuario);
 
-                if (categoriaTemp == null)
-                    throw new Exception("Categoria não encontrada");
+                if (usuarioTemp == null)
+                    throw new Exception("Usuário não encontrado");
 
-                categoriaTemp.Tipo = a.Tipo;
+                usuarioTemp.Nome = a.Nome;
+                usuarioTemp.Senha = a.Senha;
+                usuarioTemp.Email = a.Email;
+                usuarioTemp.DataCadastro = a.DataCadastro;
+                usuarioTemp.DataUltimoAcesso = a.DataUltimoAcesso;
 
-                _ctx.Categorias.Update(categoriaTemp);
+                _ctx.Usuarios.Update(usuarioTemp);
                 _ctx.SaveChanges();
 
-
             }
             catch (Exception ex)
             {
@@ -38,11 +41,11 @@ namespace ProjetoEduXAPI.Repositories
             }
         }
 
-        public Categoria BuscarPorID(Guid id)
+        public Usuario BuscarPorID(Guid id)
         {
             try
             {
-                return _ctx.Categorias.FirstOrDefault(c => c.IdCategoria == id);
+                return _ctx.Usuarios.FirstOrDefault(c => c.IdUsuario == id);
             }
             catch (Exception ex)
             {
@@ -50,31 +53,31 @@ namespace ProjetoEduXAPI.Repositories
             }
         }
 
-        public Categoria Cadastrar(Categoria a)
+        public Usuario Cadastrar(Usuario a)
         {
-           try
-           {
-                _ctx.Categorias.Add(a);
+            try
+            {
+                _ctx.Usuarios.Add(a);
                 _ctx.SaveChanges();
                 return a;
-           }
-           catch (Exception ex)
-           {
+            }
+            catch (Exception ex)
+            {
                 throw new Exception(ex.Message);
-           }
-           
+            }
+
         }
 
         public void Excluir(Guid id)
         {
             try
             {
-                Categoria categoriaTemp = BuscarPorID(id);
+                Usuario usuarioTemp = BuscarPorID(id);
 
-                if (categoriaTemp == null)
-                    throw new Exception("Categoria não encontrada");
+                if (usuarioTemp == null)
+                    throw new Exception("Usuário não encontrado");
 
-                _ctx.Categorias.Remove(categoriaTemp);
+                _ctx.Usuarios.Remove(usuarioTemp);
                 _ctx.SaveChanges();
             }
             catch (Exception ex)
@@ -83,11 +86,11 @@ namespace ProjetoEduXAPI.Repositories
             }
         }
 
-        public List<Categoria> ListarTodos()
+        public List<Usuario> ListarTodos()
         {
             try
             {
-                return _ctx.Categorias.ToList();
+                return _ctx.Usuarios.ToList();
             }
             catch (Exception ex)
             {

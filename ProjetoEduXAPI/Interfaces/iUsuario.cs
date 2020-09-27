@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProjetoEduXAPI.Interfaces
 {
-    interface iCategoria
+    interface iUsuario
     {
-        List<Categoria> ListarTodos();
-        Categoria BuscarPorID(Guid id);
-        Categoria Cadastrar(Categoria a);
-        void Alterar(Categoria a);
+        List<Usuario> ListarTodos();
+        Usuario BuscarPorID(Guid id);
+        Usuario Cadastrar(Usuario a);
+        void Alterar(Usuario a);
         void Excluir(Guid id);
     }
 }

@@ -11,5 +11,10 @@ namespace ProjetoEduXAPI.Domains
         [Key]
         public Guid IdCategoria { get; set; }
         public string Tipo { get; set; }
+
+        public Categoria()
+        {
+            IdCategoria = Guid.NewGuid();
+        }
     }
 }

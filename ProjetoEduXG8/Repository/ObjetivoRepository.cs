@@ -10,11 +10,11 @@ namespace ProjetoEduXG8.Repository
 {
     public class ObjetivoRepository : IObjetivo
     {
-        private readonly ObjetivoContext _ctx;
+        private readonly DbEduxContext _ctx;
 
         public ObjetivoRepository()
         {
-            _ctx = new ObjetivoContext();
+            _ctx = new DbEduxContext();
         }
 
         public void Adicionar(Objetivo objetivo)

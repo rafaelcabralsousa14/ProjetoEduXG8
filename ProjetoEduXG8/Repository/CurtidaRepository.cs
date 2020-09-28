@@ -10,11 +10,11 @@ namespace ProjetoEduXG8.Repository
 {
     public class CurtidaRepository : ICurtida
     {
-        private readonly CurtidaContext _ctx;
+        private readonly DbEduxContext _ctx;
 
         public CurtidaRepository()
         {
-            _ctx = new CurtidaContext();
+            _ctx = new DbEduxContext();
         }
 
         public void Adicionar(Curtida curtida)
@@ -68,7 +68,7 @@ namespace ProjetoEduXG8.Repository
                 if (curtida == null)
                     throw new Exception("Curtida não encontrado");
 
-                _ctx.Perfils.Remove(curtida);
+                _ctx.Curtidas.Remove(curtida);
                 _ctx.SaveChanges();
             }
             catch (Exception ex)

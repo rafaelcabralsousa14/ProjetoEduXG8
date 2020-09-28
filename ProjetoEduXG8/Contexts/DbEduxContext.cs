@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoEduXG8.Contexts
 {
-    public class ObjetivoContext : DbContext
+    public class DbEduxContext : Microsoft.EntityFrameworkCore.DbContext
     {
         public DbSet<Perfil> Perfils { get; set; }
         public DbSet<Objetivo> Objetivos { get; set; }
@@ -15,8 +15,8 @@ namespace ProjetoEduXG8.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (optionsBuilder.IsConfigured)
-                optionsBuilder.UseSqlServer(@"Data Source=AMARALSILVANOVO\SQLEXPRESS;User ID=sa;Password=sa132");
+            if (!optionsBuilder.IsConfigured)
+                 optionsBuilder.UseSqlServer(@"Data Source=AMARALSILVANOVO\SQLEXPRESS;Initial Catalog=ProjetoEdux;user id=sa;password=sa132");
 
 
             base.OnConfiguring(optionsBuilder);

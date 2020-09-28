@@ -11,14 +11,14 @@ namespace ProjetoEduXG8.Domains
     {
         [Key]
         public Guid IdObjetivo { get; set; }
-        public Guid IdCategoria { get; set; }
-        [ForeignKey("IdCategoria")]
+        //public Guid IdCategoria { get; set; }
+        //[ForeignKey("IdCategoria")]
         public string Descricao { get; set; }
 
         public Objetivo()
         {
             IdObjetivo = Guid.NewGuid();
-            IdCategoria = Guid.NewGuid();
+            //IdCategoria = Guid.NewGuid();
         }
 
         //tem Fk

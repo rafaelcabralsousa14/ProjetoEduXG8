@@ -10,11 +10,11 @@ namespace ProjetoEduXG8.Repository
 {
     public class PerfilRepository : IPerfil
     {
-        private readonly PerfilContext _ctx;
+        private readonly DbEduxContext _ctx;
 
         public PerfilRepository()
         {
-            _ctx = new PerfilContext();
+            _ctx = new DbEduxContext();
         }
 
         public void Adicionar(Perfil perfil)

@@ -10,21 +10,21 @@ namespace ProjetoEduXG8.Domains
     public class Curtida
     {
         [Key]
-        
+        public Guid IdCurtida { get; set; }
         public Guid IdUsuario { get; set; }
         [ForeignKey("IdUsuario")]
-        //public Guid IdDica { get; set; }
-        //[ForeignKey("IdDica")]
-        //public string Dica { get; set; }
+        public Guid IdDica { get; set; }
+        [ForeignKey("IdDica")]
+        public Dica Dica { get; set; }
         
-        public Guid IdCurtida { get; set; }
+        
 
 
 
         public Curtida()
         {
             IdUsuario = Guid.NewGuid();
-            //IdDica = Guid.NewGuid();
+            IdDica = Guid.NewGuid();
             IdCurtida = Guid.NewGuid();
 
         }

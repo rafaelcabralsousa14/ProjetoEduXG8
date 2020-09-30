@@ -26,6 +26,7 @@ namespace ProjetoEduXAPI.Domains
         public Usuario()
         {
             IdUsuario = Guid.NewGuid();
+            IdPerfil = Guid.NewGuid();
         }
     }
 }

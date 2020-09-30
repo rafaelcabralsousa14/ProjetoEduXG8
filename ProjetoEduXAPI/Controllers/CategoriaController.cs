@@ -24,32 +24,70 @@ namespace ProjetoEduXAPI.Controllers
         [HttpGet]
         public List<Categoria> Get()
         {
-            return _categoriaRepository.ListarTodos();
+            try
+            {
+                return _categoriaRepository.ListarTodos();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
 
         [HttpGet("{id}")]
         public Categoria Get(Guid id)
         {
-            return _categoriaRepository.BuscarPorID(id);
+            try
+            {
+                return _categoriaRepository.BuscarPorID(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         [HttpPost]
         public Categoria Post(Categoria a)
         {
-            return _categoriaRepository.Cadastrar(a);
+            try
+            {
+                return _categoriaRepository.Cadastrar(a);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            
         }
 
         [HttpPut("{id}")]
         public void Put(Guid id, Categoria a)
         {
-            a.IdCategoria = id;
-            _categoriaRepository.Alterar(a);
+            try
+            {
+                a.IdCategoria = id;
+                _categoriaRepository.Alterar(a);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
 
         [HttpDelete("{id}")]
         public void Delete(Guid id)
         {
-            _categoriaRepository.Excluir(id);
+            try
+            {
+                _categoriaRepository.Excluir(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

@@ -41,7 +41,7 @@
 </ol>
 <h3> Sistema mobile </h3>
 <ol>
-  <li>1. O aluno poderá ver seu ranking geral;</li>
+<li> O aluno poderá ver seu ranking geral;</li>
 <li> O aluno poderá postar algum conteúdo em imagem e/ou texto;</li>
 <li> O aluno poderá ver a timeline de posts da sua turma;</li>
 <li> O aluno poderá ver dicas cadastradas pelo professor, separado por temas;</li>

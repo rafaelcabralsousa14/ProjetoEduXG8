@@ -47,4 +47,4 @@
 <li> O aluno poderá ver dicas cadastradas pelo professor, separado por temas;</li>
 </ol>
 
-
+![Modelo logico Edux](https://github.com/rafaelcabralsousa14/ProjetoEduXG8/blob/master/ModeloLogico.png)

@@ -11,8 +11,8 @@
 <h3>Sistema Web</h3>
 
 <h3>Perfis de Usuário:</h3>
-
-<li> Aluno: pode ser matriculado em uma determinada turma;</li>
+<b>
+<li> Aluno:</b> pode ser matriculado em uma determinada turma;
 <li> Professor:   pode lecionar em diversas turmas, além de gerenciar os alunos;</li>
 
 <ol>

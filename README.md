@@ -48,5 +48,3 @@
 </ol>
 
 
-
-![ModeloLógicoEdux PNG](https://user-images.githubusercontent.com/71020989/94752570-fc079b00-0361-11eb-8d44-1c4991006ae2.png)

@@ -13,7 +13,7 @@
 <h3>Perfis de Usuário:</h3>
 <b>
 <li> Aluno:</b> pode ser matriculado em uma determinada turma;
-<b><li> Professor:</b>pode lecionar em diversas turmas, além de gerenciar os alunos;</li>
+<b><li> Professor: </b>pode lecionar em diversas turmas, além de gerenciar os alunos;</li>
 
 <ol>
 <h3> Funcionalidades do Professor </h3>
